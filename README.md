@@ -1,27 +1,21 @@
-# Weekly Timetable App
+# Weekly Schedule App
 
-A simple web-based timetable manager to plan and organize weekly lectures.
+A lightweight web app to plan and manage your weekly schedule with ease.
 
 ## Features
-- Add lectures with subject, teacher, classroom, and start time.
-- End time auto-calculated (50 minutes per lecture).
-- Prevents scheduling conflicts (no overlapping slots).
-- Remove single lectures or clear the entire timetable.
-- Data stored in browser local storage (persists after refresh).
-- Responsive and easy-to-use interface.
-
-## How It Works
-- Open the app in your browser.
-- Use **+ Add Lecture** to create a new slot.
-- Select day, time, subject, teacher, and classroom.
-- Timetable displays in a weekly grid (days across, times down).
-- Manage your schedule easily with edit/delete options.
+- Add events with subject, teacher, classroom, and start time.
+- Auto-calculates 50-minute duration per slot.
+- Detects and prevents overlapping schedules.
+- Remove individual events or clear the entire schedule.
+- Saves data in your browser (local storage).
+- Simple, responsive weekly grid view.
 
 ## Tech Stack
-- **HTML5** for structure  
-- **CSS3** for styling and layout  
-- **JavaScript (Vanilla)** for functionality and local storage  
+- **HTML5** – structure  
+- **CSS3** – styling and layout  
+- **JavaScript (Vanilla)** – interactivity and storage  
 
 ## Usage
-Just open `index.html` in your browser.  
-No installation or backend required.
+1. Open `index.html` in your browser.  
+2. Click **+ Add Lecture** to create a new entry.  
+3. Your schedule is saved automatically in local storage.  
