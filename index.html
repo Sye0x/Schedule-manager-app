@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Weekly Timetable</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h2>Weekly Timetable</h2>
+
+    <div class="controls">
+        <button class="btn" onclick="openModal()">+ Add Lecture</button>
+        <button class="btn clear" onclick="clearTimetable()">Clear Timetable</button>
+    </div>
+
+    <div id="timetable" class="timetable"></div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal" onclick="if(event.target===this) closeModal()">
+        <div class="modal-content">
+            <h3>Add Lecture</h3>
+
+            <label>Day
+                <select id="day">
+                    <option value="">Select day</option>
+                    <option>Monday</option>
+                    <option>Tuesday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                    <option>Saturday</option>
+                    <option>Sunday</option>
+                </select>
+            </label>
+
+            <label>Start time</label>
+            <div class="time-select">
+                <select id="hour"></select>
+                <select id="minute"></select>
+                <select id="ampm">
+                    <option>AM</option>
+                    <option>PM</option>
+                </select>
+            </div>
+
+            <div class="small-note">
+                End (auto 50 min): <span id="endTimeDisplay" class="end-display">--:--</span>
+            </div>
+
+            <label>Subject
+                <input id="subject" type="text" placeholder="e.g. Data Warehousing" />
+            </label>
+            <label>Teacher
+                <input id="teacher" type="text" placeholder="e.g. Fouzia Qureshi" />
+            </label>
+            <label>Classroom
+                <input id="room" type="text" placeholder="e.g. M10" />
+            </label>
+
+            <div class="modal-actions">
+                <button class="btn" onclick="saveLecture()">Save</button>
+                <button class="btn" style="background:#aaa" onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
